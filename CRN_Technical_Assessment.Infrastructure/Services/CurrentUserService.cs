@@ -1,0 +1,37 @@
+﻿using CRN_Technical_Assessment.Application.Interfaces;
+using Microsoft.AspNetCore.Http;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CRN_Technical_Assessment.Infrastructure.Services
+{
+
+    public class CurrentUserService : ICurrentUserService
+    {
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public CurrentUserService(IHttpContextAccessor httpContextAccessor)
+        {
+            _httpContextAccessor = httpContextAccessor;
+        }
+
+        public int? UserId =>
+            int.TryParse(
+                _httpContextAccessor.HttpContext?
+                    .User?
+                    .FindFirstValue(ClaimTypes.NameIdentifier),
+                out var id)
+            ? id
+            : null;
+
+        public string? UserName =>
+            _httpContextAccessor.HttpContext?
+                .User?
+                .FindFirstValue(ClaimTypes.Name);
+    }
+}
+

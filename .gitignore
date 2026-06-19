@@ -1,0 +1,16 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+
+# ASP.NET Core settings
+appsettings.json
+appsettings.Development.json
+
+# Logs
+logs/
+*.log

@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="CRN_Technical_Assessment.api/CRN_Technical_Assessment.api.csproj" />
+    <Project Path="CRN_Technical_Assessment.Application/CRN_Technical_Assessment.Application.csproj" />
+    <Project Path="CRN_Technical_Assessment.Domain/CRN_Technical_Assessment.Domain.csproj" />
+    <Project Path="CRN_Technical_Assessment.Infrastructure/CRN_Technical_Assessment.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/API.Tests/API.Tests.csproj" />
+    <Project Path="tests/Application.Tests/Application.Tests.csproj" />
+    <Project Path="tests/Infrastructure.Tests/Infrastructure.Tests.csproj" />
+  </Folder>
+</Solution>
+
